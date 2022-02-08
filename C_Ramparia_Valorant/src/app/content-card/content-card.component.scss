@@ -2,18 +2,36 @@
 //  border: 2px solid #000;
 //}
 :host{
-    border: 1px solid #337d33;
+    border: 1px solid #000000;
+    background-image: url("https://i0.wp.com/thegamehaus.com/wp-content/uploads/2020/02/ERjzIVVX0AAXwJI.jpg");
     display: block;
-    width: 400px;
     margin: 10px auto;
     text-align: center;
+    text-transform: uppercase;
   
     &.is-first{
       border: 2px solid #000;
     }
+    .title{
+        color: #fd4246;
+        font-size: 50px;
+    }
+
+    .ability{
+        color: #fff;
+        text-align: center;
+        padding: 10px 30px;
+    }
+
+    .description{
+        color: #fff;
+        text-align: left;
+        margin: 20px 400px;
+    }
+
     img{
       margin: 10px;
-      max-width: 350px;
+      max-width: 550px;
     }
     .meta-data{
       //height: 80px;
@@ -28,7 +46,7 @@
   
     }
     .type{
-  
+        color: #fff
     }
     .tags{
       color: #fff;
@@ -41,4 +59,3 @@
       margin: 0 5px 0 0;
     }
   }
-  

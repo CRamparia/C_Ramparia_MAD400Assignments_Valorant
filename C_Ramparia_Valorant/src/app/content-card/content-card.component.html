@@ -1,8 +1,9 @@
-    <h1>{{ valorantAgent?.title }}</h1>
+    <h1 class="title">{{ valorantAgent?.title }}</h1>
     <img *ngIf="valorantAgent?.imgURL" [src]="valorantAgent?.imgURL">
-    <div class="type">{{ valorantAgent?.type }}</div>
-    <p class="description">{{ valorantAgent?.description }}</p>
+    <h2 class="type"> || role || \\ {{ valorantAgent?.type }} //</h2>
     <div class="ability">{{ valorantAgent?.abilities }}</div>
+    <p class="description">{{ valorantAgent?.description }}</p>
+
 
     <div *ngIf="valorantAgent?.tags" class="tags">
         <span class="tag" *ngFor="let tag of valorantAgent?.tags">{{ tag }}</span>
