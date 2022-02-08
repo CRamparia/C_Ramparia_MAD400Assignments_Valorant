@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Valorant } from '../helper-files/Valorant';
 
 
 
@@ -9,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ContentCardComponent implements OnInit {
 
+  @Input() valorantAgent?: Valorant;
 
  
 

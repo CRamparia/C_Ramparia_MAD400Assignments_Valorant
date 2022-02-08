@@ -1,2 +1,2 @@
-<div class="title">{{ valorantAgent ? valorantAgent.title : '' }}</div> 
-<div class="description">{{ valorantAgent ? valorantAgent.description : '' }}</div>
+<app-content-card *ngFor="let agent of valorantAgents; index as i; last as islast"
+    [valorantAgent]="agent" [class.is-last]="islast"></app-content-card>
