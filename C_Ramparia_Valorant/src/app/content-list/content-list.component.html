@@ -1,2 +1,25 @@
-<app-content-card *ngFor="let agent of valorantAgents; index as i; last as islast"
-    [valorantAgent]="agent" [class.is-last]="islast"></app-content-card>
+<div>
+    <h1>Search Valorant Agent</h1>
+    <input #agentToFind>
+    <br>
+    <br>
+    <button (click) = "SearchContent(agentToFind.value)">Find It!</button>
+    <br>
+    <br>
+
+    <div *ngIf = "SearchContent(agentToFind.value) === 'null'"></div>
+    <div *ngIf = "SearchContent(agentToFind.value) === 'no'" class="noresultfound">{{agentToFind.value}} Not Results Found!</div>
+    <div *ngIf = "SearchContent(agentToFind.value) === 'yes'" class="resultsfound">{{agentToFind.value}} Found.</div>
+
+</div>
+
+<h2>No Type</h2>
+<app-content-card *ngFor="let agent of (valorantAgents | typeFilter); index as i; first as isFirst"
+    [valorantAgent]="agent" [class.is-first]="isFirst" class="notype"></app-content-card>
+
+<!-- <h2>Sentinel</h2>
+<app-content-card *ngFor="let agent of (valorantAgents | typeFilter: 'Sentinel'); index as i; first as isFirst"
+[valorantAgent]="agent" [class.is-first]="isFirst"></app-content-card>
+ -->
+
+

@@ -38,8 +38,8 @@ export class ContentListComponent implements OnInit {
       title: "Brimstone",
       description: "Joining from the USA, Brimstone's orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance make him an unmatched boots-on-the-ground commander.",
       abilities: "|| Incendiary || Sky Smoke || Stim Beacon || Orbital Strike ||",
-      imgURL: "https://www.dexerto.com/wp-content/uploads/2021/01/Valorant-Brimstone.png",
-      type: "Controller" 
+      imgURL: "https://www.dexerto.com/wp-content/uploads/2021/01/Valorant-Brimstone.png"//,
+      // type: "Controller" 
     },{
       id: 4,
       title: "Phoenix",
@@ -53,11 +53,32 @@ export class ContentListComponent implements OnInit {
       description: "The genius of Germany. Killjoy secures the battlefield with ease using her arsenal of inventions. If the damage from her gear doesn't stop her enemies, her robots' debuff will help make short work of them.",
       abilities: "|| alarmbot || Turret || nanoswarm || lockdown ||",
       imgURL: "https://cdn1.dotesports.com/wp-content/uploads/2021/06/23052003/KillJoy_Wallpapers_blue2-scaled-1.jpg",
-      type: "sentinel" 
+      type: "Sentinel" 
+    },{
+      id: 6,
+      title: "sova",
+      description: "Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.",
+      abilities: "|| shock Bolt || Recon Bolt || owl Drone || hunter's fury ||",
+      imgURL: "https://cdn-wp.thesportsrush.com/2021/03/9fbf96bf-sova.jpg",
+      type: "Sentinel" 
     }];
 
-
+    
   }
+  
+  SearchContent(search : String): String{
+      var reply = "no";
+      if(search.length == 0){
+        reply = 'null';
+      }
+      for(var player of this.valorantAgents){
+        if(player.title.toUpperCase() === search.toUpperCase()){
+          reply = "yes";
+        }
+      }
+      return reply;
+    }
+
 
   ngOnInit(): void {
   }

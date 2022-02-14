@@ -7,6 +7,8 @@ import { TestPipePipe } from './test-pipe.pipe';
 import { TestDereictiveDirective } from './test-dereictive.directive';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
+import { TypeFilterPipe } from './type-filter.pipe';
+import { MultiTypeFilterPipe } from './multi-type-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ContentListComponent } from './content-list/content-list.component';
     TestPipePipe,
     TestDereictiveDirective,
     ContentCardComponent,
-    ContentListComponent
+    ContentListComponent,
+    TypeFilterPipe,
+    MultiTypeFilterPipe
   ],
   imports: [
     BrowserModule
