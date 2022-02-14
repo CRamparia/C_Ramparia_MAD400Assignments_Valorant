@@ -6,10 +6,10 @@ import { Valorant } from './helper-files/Valorant';
 })
 export class TypeFilterPipe implements PipeTransform {
 
-  transform(agents: Valorant[]): Valorant[] {
-    return agents.filter(function (v){
-        return v.type != null ? v.type.length != 0 : null;
-    });
+  transform(agents: Valorant[], agent?: string) {
+
+      return agents.filter(Valorant => Valorant.type == agent ? agents : null);
+      
   }
 
 }

@@ -17,9 +17,9 @@
 <app-content-card *ngFor="let agent of (valorantAgents | typeFilter); index as i; first as isFirst"
     [valorantAgent]="agent" [class.is-first]="isFirst" class="notype"></app-content-card>
 
-<!-- <h2>Sentinel</h2>
+<h2>Sentinel</h2>
 <app-content-card *ngFor="let agent of (valorantAgents | typeFilter: 'Sentinel'); index as i; first as isFirst"
 [valorantAgent]="agent" [class.is-first]="isFirst"></app-content-card>
- -->
+
 
 
