@@ -3,7 +3,6 @@
 //}
 :host{
     border: 1px solid #000000;
-    background-image: url("https://i0.wp.com/thegamehaus.com/wp-content/uploads/2020/02/ERjzIVVX0AAXwJI.jpg");
     display: block;
     margin: 10px auto;
     text-align: center;
@@ -42,9 +41,15 @@
     .author-info{
       height: 24px;
     }
-    .creator{
-  
+
+    .sentinel{
+      background-image: url("https://i0.wp.com/thegamehaus.com/wp-content/uploads/2020/02/ERjzIVVX0AAXwJI.jpg");
     }
+
+    .duelist{
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEppO6yYGoeZDo22_l6-bscd40Y_-GhhSFmw&usqp=CAU");
+    }
+
     .type{
         color: #fff
     }

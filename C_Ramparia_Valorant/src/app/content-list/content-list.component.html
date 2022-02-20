@@ -1,9 +1,9 @@
-<div>
+<div class="input">
     <h1>Search Valorant Agent</h1>
-    <input #agentToFind>
+    <input class="textfield" #agentToFind>
     <br>
     <br>
-    <button (click) = "SearchContent(agentToFind.value)">Find It!</button>
+    <button (click) = "SearchContent(agentToFind.value)" class="button">Find It!</button>
     <br>
     <br>
 
@@ -19,7 +19,10 @@
 
 <h2>Sentinel</h2>
 <app-content-card *ngFor="let agent of (valorantAgents | typeFilter: 'Sentinel'); index as i; first as isFirst"
-[valorantAgent]="agent" [class.is-first]="isFirst"></app-content-card>
+[valorantAgent]="agent" [class.is-first]="isFirst" class="sentinel"></app-content-card>
 
+<h2>Duelist</h2>
+<app-content-card *ngFor="let agent of (valorantAgents | typeFilter: 'Duelist'); index as i; first as isFirst"
+[valorantAgent]="agent" [class.is-first]="isFirst" class="duelist"></app-content-card>
 
 

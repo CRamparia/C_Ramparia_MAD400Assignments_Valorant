@@ -9,3 +9,39 @@
     font-weight: bold;
     font-size: large;
 }
+
+.input{
+    align-content: center;
+}
+
+
+.sentinel{
+    background-image: url("https://i0.wp.com/thegamehaus.com/wp-content/uploads/2020/02/ERjzIVVX0AAXwJI.jpg");
+    border: 5px;
+    border-color: darkorange ;
+    border-style: solid;
+  }
+
+  .duelist{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEppO6yYGoeZDo22_l6-bscd40Y_-GhhSFmw&usqp=CAU");
+    border: 5px;
+    border-color:black  ;
+    border-style: solid;
+  }
+
+  .notype{
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxAClF-RJpmUDBj0YOKDa5vP-EU-7YQrDIZQ&usqp=CAU");
+      border: 5px;
+    border-color:brown  ;
+    border-style: solid;
+  }
+
+  h2{
+      text-align: center;
+      font-size: 50px;
+      border: 4px;
+      border-color: black;
+      border-style: solid;
+      background-color: #fd4246;
+      color: black;
+  }
