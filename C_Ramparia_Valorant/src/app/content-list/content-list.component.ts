@@ -17,7 +17,7 @@ export class ContentListComponent implements OnInit {
       title: "Chamber",
       description: "Well dressed and well armed, French weapons designer Chamber expels aggressors with deadly precision. He leverages his custom arsenal to hold the line and pick off enemies from afar, with a contingency built for every plan.",
       abilities: "|| Headhunter || Rendezvous || Treademark || Tour De Force ||",
-      imgURL: "https://i.ytimg.com/vi/FUoqAn5T4h4/maxresdefault.jpg",
+      imgURL: "",
       type: "Sentinel" 
     },{
       id: 1,
