@@ -1,0 +1,26 @@
+<h1>Create New Valorant Agent</h1>
+
+<div>
+    ID : <input #newid type="number">
+</div>
+<div>
+    Title : <input #newtitle>
+</div>
+<div>
+    Description : <input #newdescription>
+</div>
+<div>
+    Abilities : <input #newabilities>
+</div>
+<div>
+    Image : <input #newimage>
+</div>
+<div>
+    Type : <input #newtype>
+</div>
+<div>
+    Tags : <input #newtags>
+</div>
+<div>
+    <button (click)="addAgent(newid.value, newtitle.value, newdescription.value, newabilities.value, newimage.value, newtype.value, newtags.value)">Create Agent</button>
+</div>

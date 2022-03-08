@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core'
 import { Valorant } from '../helper-files/Valorant';
 
 @Component({
@@ -81,6 +81,14 @@ export class ContentListComponent implements OnInit {
 
 
   ngOnInit(): void {
+  }
+
+  addAgentToList(newAgentOnTheList: Valorant): void{
+    this.valorantAgents.push(newAgentOnTheList);
+    console.log("SomeThing added..");
+    this.valorantAgents = [...this.valorantAgents];
+    console.log("Added Confirmation");
+    console.log("Agent: ", this.valorantAgents)
   }
 
 }
