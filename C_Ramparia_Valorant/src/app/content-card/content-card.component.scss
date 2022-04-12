@@ -11,6 +11,15 @@
     &.is-first{
       border: 2px solid #000;
     }
+
+    &.found{
+      border-color:orange;
+      border-width: 5px;
+    }
+
+    &.individualAgent{
+        background-color: #000;
+    }
     .title{
         color: #fd4246;
         font-size: 50px;

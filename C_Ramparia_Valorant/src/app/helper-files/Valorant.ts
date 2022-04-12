@@ -5,5 +5,5 @@ export interface Valorant{
     abilities: string;
     imgURL?: string;
     type?: string;
-    tags?: Array<string>;
+    tags?: string[];
 }

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Valorant } from '../helper-files/Valorant';
+import { ValorantServiceService } from '../services/valorant-service.service';
 
 @Component({
   selector: 'app-content-list',
@@ -8,29 +9,30 @@ import { Valorant } from '../helper-files/Valorant';
 })
 export class ContentListComponent implements OnInit {
 
-  valorantAgents: Valorant[] ;
-  constructor() { 
-    
+  valorantAgents: Valorant[];
+  agentFound? : boolean;
   
-    
-    
+  constructor(private valorantAgentService: ValorantServiceService) { 
+    this.valorantAgents = [];
   }
-  
-  SearchContent(search : String): String{
-      var reply = "no";
-      if(search.length == 0){
-        reply = 'null';
-      }
-      for(var player of this.valorantAgents){
-        if(player.title.toUpperCase() === search.toUpperCase()){
-          reply = "yes";
-        }
-      }
-      return reply;
+
+    ngOnInit(): void {
+    this.valorantAgentService.getAgent().subscribe(listofAgent => this.valorantAgents = listofAgent);
+  }
+
+
+  SearchContent(search : String): void{
+    if(this.valorantAgents.some(d => d.title === search)){
+      this.agentFound = true;
+    }else{
+      this.agentFound = false;
+    }
+    
+    if(this.valorantAgents.filter(d => d.title === search).length){
+      this.agentFound = true;
+    }else{
+      this.agentFound = false;
     }
 
-
-  ngOnInit(): void {
   }
-
 }

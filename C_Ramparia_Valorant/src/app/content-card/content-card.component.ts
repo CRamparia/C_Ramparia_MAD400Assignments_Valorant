@@ -17,6 +17,7 @@ export class ContentCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

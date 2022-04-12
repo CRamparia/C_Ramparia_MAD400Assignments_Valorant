@@ -7,22 +7,26 @@
     <br>
     <br>
 
-    <div *ngIf = "SearchContent(agentToFind.value) === 'null'"></div>
-    <div *ngIf = "SearchContent(agentToFind.value) === 'no'" class="noresultfound">{{agentToFind.value}} Not Results Found!</div>
-    <div *ngIf = "SearchContent(agentToFind.value) === 'yes'" class="resultsfound">{{agentToFind.value}} Found.</div>
-
+    <span class="found" *ngIf="agentFound">{{agentToFind.value}} Found !</span>
+    <span class="failed" *ngIf="agentFound === false">{{agentToFind.value}} Not Found</span> 
 </div>
 
 <h2>No Type</h2>
-<app-content-card *ngFor="let agent of (valorantAgents | typeFilter); index as i; first as isFirst"
+<app-content-card
+[class.found]="agentToFind.value === agent.title"
+ *ngFor="let agent of (valorantAgents | typeFilter); index as i; first as isFirst"
     [valorantAgent]="agent" [class.is-first]="isFirst" class="notype"></app-content-card>
 
 <h2>Sentinel</h2>
-<app-content-card *ngFor="let agent of (valorantAgents | typeFilter: 'Sentinel'); index as i; first as isFirst"
+<app-content-card
+[class.found]="agentToFind.value === agent.title"
+*ngFor="let agent of (valorantAgents | typeFilter: 'Sentinel'); index as i; first as isFirst"
 [valorantAgent]="agent" [class.is-first]="isFirst" class="sentinel"></app-content-card>
 
 <h2>Duelist</h2>
-<app-content-card *ngFor="let agent of (valorantAgents | typeFilter: 'Duelist'); index as i; first as isFirst"
+<app-content-card 
+[class.found]="agentToFind.value === agent.title"
+*ngFor="let agent of (valorantAgents | typeFilter: 'Duelist'); index as i; first as isFirst"
 [valorantAgent]="agent" [class.is-first]="isFirst" class="duelist"></app-content-card>
 
 
