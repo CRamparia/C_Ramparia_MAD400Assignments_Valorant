@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   ngOnInit(): void{
-    this.agentServices.getContentItem(2).subscribe(
+    this.agentServices.getAgentItem(2).subscribe(
       agentAtItem => this.individualAgent = agentAtItem
     );
   }

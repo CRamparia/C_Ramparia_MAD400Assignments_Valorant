@@ -1,1 +1,6 @@
-<p>messages-component works!</p>
+<div *ngIf="messageService.messages.length">
+    <h2>Message</h2>
+    <div *ngFor='let message of messageService.messages'>{{message}}</div>
+
+    <button type="button" class="clear" (click)="messageService.clear()">Clear Messages</button>
+</div>

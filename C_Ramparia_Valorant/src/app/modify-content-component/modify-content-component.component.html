@@ -1,0 +1,47 @@
+<div>
+    <label>
+        ID: <input [(ngModel)]="tempid" type="number">
+    </label>
+</div>
+
+<div>
+    <label>
+        Title: <input [(ngModel)]="newAgent.title">
+    </label>
+</div>
+
+<div>
+    <label>
+        Description: <input [(ngModel)]="newAgent.description">
+    </label>
+</div>
+
+<div>
+    <label>
+        Abilities: <input [(ngModel)]="newAgent.abilities">
+    </label>
+</div>
+
+<div>
+    <label>
+        Image: <input [(ngModel)]="newAgent.imgURL">
+    </label>
+</div>
+
+<div>
+    <label>
+        Type: <input [(ngModel)]="newAgent.type">
+    </label>
+</div>
+
+<div>
+    <label>
+        Tags: <input [(ngModel)]="temptags">
+    </label>
+</div>
+
+<div>
+    <button (click)="modifyOrAddItemToParent()">
+        {{(tempid !== "") ? "Update Content": "Add Content"}}
+    </button>
+</div>

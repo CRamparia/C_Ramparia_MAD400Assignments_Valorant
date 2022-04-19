@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Valorant } from '../helper-files/Valorant';
 import { ValorantServiceService } from '../services/valorant-service.service';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-content-list',
@@ -12,12 +13,14 @@ export class ContentListComponent implements OnInit {
   valorantAgents: Valorant[];
   agentFound? : boolean;
   
-  constructor(private valorantAgentService: ValorantServiceService) { 
+  constructor(private valorantAgentService: ValorantServiceService, private messageService: MessageService) { 
     this.valorantAgents = [];
   }
 
     ngOnInit(): void {
-    this.valorantAgentService.getAgent().subscribe(listofAgent => this.valorantAgents = listofAgent);
+    this.valorantAgentService.getAgent().subscribe(listofAgent =>
+       this.valorantAgents = listofAgent);
+       this.messageService.add("List Loaded Successfully");
   }
 
 
@@ -35,4 +38,21 @@ export class ContentListComponent implements OnInit {
     }
 
   }
+
+  addValorantToList(newAgent: Valorant): void{
+    this.messageService.add("New content added and sent to list, id number is " + newAgent.id)
+    this.valorantAgentService.getAgent().subscribe(listOfAgent => {
+      this.valorantAgents = listOfAgent;
+      this.messageService.add("New content added and display on the list!");
+    });
+  }
+
+  updateValorantToList(): void{
+    this.valorantAgentService.getAgent().subscribe(listOfAgents => {
+      this.valorantAgents = listOfAgents;
+      this.messageService.add("Content on the list Updated");
+    });
+  }
+  
+
 }

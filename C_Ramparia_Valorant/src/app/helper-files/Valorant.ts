@@ -1,5 +1,5 @@
 export interface Valorant{
-    id: number;
+    id?: number;
     title: string;
     description: string;
     abilities: string;
