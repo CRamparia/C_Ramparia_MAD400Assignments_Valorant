@@ -71,6 +71,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     MatIconModule,
     MatDialogModule,
+    MatChipsModule,
     NoopAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]

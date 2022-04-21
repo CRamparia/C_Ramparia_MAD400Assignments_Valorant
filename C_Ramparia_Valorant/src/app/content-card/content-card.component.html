@@ -1,4 +1,4 @@
-    <h1 class="title">{{ valorantAgent?.title }}</h1>
+    <!-- <h1 class="title">{{ valorantAgent?.title }}</h1>
     <img *ngIf="valorantAgent?.imgURL" [src]="valorantAgent?.imgURL">
 
     <div *ngIf="valorantAgent?.type == null">{{ valorantAgent?.type }}</div>
@@ -16,5 +16,35 @@
 
     <div *ngIf="valorantAgent?.tags" class="tags" >
         <span class="tag" *ngFor="let tag of valorantAgent?.tags">{{ tag }}</span>
-    </div>
+    </div> -->
 
+<mat-card *ngIf="valorantAgent" class="card">
+    <!-- Agent Name -->
+    <mat-card-header class="title">{{ valorantAgent?.title }}</mat-card-header>
+
+    <!-- Valorant Agent Image -->
+    <img mat-card-image *ngIf="valorantAgent.imgURL" [src]="valorantAgent?.imgURL" alt="Valorant Agent Image">
+
+    <!-- Default Image -->
+    <!-- <img mat-card-image *ngIf="!valorantAgent.imgURL" (click)="logId()" [src]="https://library.sportingnews.com/styles/crop_style_16_9_mobile_2x/s3/2021-08/valorant-promo-image-ftr_7xt9eqw2n2k71icqzep2efi5k.jpeg?itok=XAyRS4rR" alt="Valorant Agent Default Image"> -->
+   
+    <mat-card-content class="info">
+    <!-- Valorant Agent Type -->
+    <mat-card-subtitle class="type"> || ROLE || {{ valorantAgent?.type }}</mat-card-subtitle>
+
+    <!-- Valorant Agent Description -->
+    <p class="description">{{ valorantAgent?.description }}</p>
+
+    <!-- Valorant Agent Ability -->
+    <mat-card-subtitle class="ability">{{ valorantAgent?.abilities }}</mat-card-subtitle>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+        <app-modify-content-component color="Warn" buttonText="Update Button" [newAgent]="valorantAgent" ></app-modify-content-component>
+    </mat-card-actions>
+
+    <mat-chip-list class="tags" *ngIf="valorantAgent?.tags" aria-label="Types of Agents">
+        <mat-chip appHoverAffect color="primary" *ngFor="let tag of valorantAgent?.tags"></mat-chip>
+    </mat-chip-list>
+</mat-card>
