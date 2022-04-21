@@ -41,8 +41,8 @@ export class ContentListComponent implements OnInit {
 
   addValorantToList(newAgent: Valorant): void{
     this.messageService.add("New content added and sent to list, id number is " + newAgent.id)
-    this.valorantAgentService.getAgent().subscribe(listOfAgent => {
-      this.valorantAgents = listOfAgent;
+    this.valorantAgentService.getAgent().subscribe(listOfAgents => {
+      this.valorantAgents = listOfAgents;
       this.messageService.add("New content added and display on the list!");
     });
   }

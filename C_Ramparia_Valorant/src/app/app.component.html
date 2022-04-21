@@ -1,10 +1,10 @@
+<app-messages-component></app-messages-component>
 <h1>Individual Item</h1>
 <p>
-    <label>Display single item at id: <input #id></label>
-    <button (click)="displayItem(id.value)">Display Item!</button>
+    <label>Display single item at id: <input matInput #id></label>
+    <button mat-raised-button color="primary" (click)="displayItem(id.value)">Display Item!</button>
 </p>
 <app-content-card [valorantAgent]="individualAgent" class="individualAgent"></app-content-card>
 
 <h1>Content List</h1>
 <app-content-list></app-content-list>
-<app-messages-component></app-messages-component>

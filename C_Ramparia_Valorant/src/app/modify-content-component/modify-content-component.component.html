@@ -1,30 +1,30 @@
-<div>
+<!-- <div>
     <label>
-        ID: <input [(ngModel)]="tempid" type="number">
+        ID: <input matInput [(ngModel)]="tempid" type="number">
     </label>
 </div>
 
 <div>
     <label>
-        Title: <input [(ngModel)]="newAgent.title">
+        Title: <input matInput [(ngModel)]="newAgent.title">
     </label>
 </div>
 
 <div>
     <label>
-        Description: <input [(ngModel)]="newAgent.description">
+        Description:  <input matInput [(ngModel)]="newAgent.description">
     </label>
 </div>
 
 <div>
     <label>
-        Abilities: <input [(ngModel)]="newAgent.abilities">
+        Abilities: <input matInput [(ngModel)]="newAgent.abilities">
     </label>
 </div>
 
 <div>
     <label>
-        Image: <input [(ngModel)]="newAgent.imgURL">
+        Image: <input matInput [(ngModel)]="newAgent.imgURL">
     </label>
 </div>
 
@@ -36,7 +36,7 @@
 
 <div>
     <label>
-        Tags: <input [(ngModel)]="temptags">
+        Tags: <input matInput [(ngModel)]="temptags">
     </label>
 </div>
 
@@ -44,4 +44,8 @@
     <button (click)="modifyOrAddItemToParent()">
         {{(tempid !== "") ? "Update Content": "Add Content"}}
     </button>
-</div>
+</div> -->
+
+<button mat-raised-button color="accent" (click)="openDialog()">
+    {{buttonText}}
+</button>

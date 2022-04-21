@@ -3,10 +3,10 @@
 
 <div class="input">
     <h1>Search Valorant Agent</h1>
-    <input class="textfield" #agentToFind>
+    <input matInput class="textfield" #agentToFind>
     <br>
     <br>
-    <button (click) = "SearchContent(agentToFind.value)" class="button">Find It!</button>
+    <button mat-raised-button [color]="agentFound === false ? 'warn' : 'primary'"  (click) = "SearchContent(agentToFind.value)" class="button">Find It!</button>
     <br>
     <br>
 

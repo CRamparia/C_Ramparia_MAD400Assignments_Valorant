@@ -20,6 +20,10 @@
     &.individualAgent{
         background-color: #000;
     }
+
+    &.duelist{
+      color: #000;
+    }
     .title{
         color: #fd4246;
         font-size: 50px;
@@ -41,9 +45,7 @@
       margin: 10px;
       max-width: 550px;
     }
-    .meta-data{
-      //height: 80px;
-    }
+
     .creator,.type,.tags{
       margin: 8px 16px 8px 0;
     }

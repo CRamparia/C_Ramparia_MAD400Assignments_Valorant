@@ -1,6 +1,6 @@
 <div *ngIf="messageService.messages.length">
-    <h2>Message</h2>
+    <h2><span [matBadge]="messageService.messages.length" matBadgeOverlap="false"> Message</span></h2>
     <div *ngFor='let message of messageService.messages'>{{message}}</div>
 
-    <button type="button" class="clear" (click)="messageService.clear()">Clear Messages</button>
+    <button mat-raised-button color="basic" type="button" class="clear" (click)="messageService.clear()">Clear Messages</button>
 </div>

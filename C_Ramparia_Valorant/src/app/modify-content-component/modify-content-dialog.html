@@ -1,0 +1,54 @@
+<h1 mat-dialog-title>Add Agent</h1>
+<div mat-dialog-content>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>ID</mat-label>
+      <input matInput [(ngModel)]="tempid" type="number">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="dataTheDialogIsReceving.title">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput [(ngModel)]="dataTheDialogIsReceving.description">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Ability</mat-label>
+      <input matInput [(ngModel)]="dataTheDialogIsReceving.abilities">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Image URL</mat-label>
+      <input matInput [(ngModel)]="dataTheDialogIsReceving.imgURL">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Type</mat-label>
+      <input matInput [(ngModel)]="dataTheDialogIsReceving.type">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Tags</mat-label>
+      <input matInput [(ngModel)]="temptags">
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
+
+  <button mat-raised-button color="primary"
+    [mat-dialog-close]="{ content: dataTheDialogIsReceving, tags: temptags, id: tempid }" cdkFocusInitial>
+    {{(tempid !== "") ? "Update Agent": "Add Agent"}}
+  </button>
+</div>
+

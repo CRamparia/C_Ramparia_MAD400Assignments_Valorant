@@ -3,12 +3,12 @@ import { Valorant } from './helper-files/Valorant';
 import { MessageService } from './services/message.service';
 import { ValorantServiceService } from './services/valorant-service.service';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'C_Ramparia_Valorant';
   individualAgent?: Valorant;
@@ -21,6 +21,7 @@ export class AppComponent {
       agentAtItem => this.individualAgent = agentAtItem
     );
   }
+
 
   displayItem(id: string): void{
     if(!parseInt(id)){
@@ -38,3 +39,4 @@ export class AppComponent {
     });
   }
 }
+
